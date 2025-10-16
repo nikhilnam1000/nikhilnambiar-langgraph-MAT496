@@ -17,3 +17,6 @@ Introduction to Langsmith Studio and its functionality which offers a more visua
 ## Lesson 4
 We initialize a conversation with some human and AI messages then pass that context to a model to solicit a response (context changes to explore structure).
 We then define a tool pass in a message that invokes said tools and then we use the messages as state in langgraph, defining reducers in the process **(see chain.ipynb for detailed discussions)**. Finally we invoke our graphs.
+
+## Lesson 5
+We add a tool to our router which, depending on the content of the messages will choose to either invoke or not invoke the tool. Not much to tweak with. **(see router.ipynb)**
