@@ -23,3 +23,6 @@ We add a tool to our router which, depending on the content of the messages will
 
 ## Lesson 6
 We extend what we did in lesson 5 to a generic agent architecture by giving a ToolMessage back to the llm instead of the user. We then dicuss the structure of ReAct and then build and execute it. Again nothing significant to tweak, could've changes the tool function and aimessage prompt. **(see agent.ipynb)**
+
+## Lesson 7
+We again extend what we did in lesson 6 to introduce the concept of memory for our agent, which we demonstrate has no concept of memory on its own. We use persistence to address this problem, discussed in detail in agent-memory.ipynb. AGain nothing significant to tweak, can change the tools and context messages but nothing paradigm altering.
