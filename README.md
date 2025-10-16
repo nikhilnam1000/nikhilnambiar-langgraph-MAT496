@@ -13,3 +13,7 @@ Then we move onto the visual aspect of the graph. Multiple graph invokes confirm
 
 ## Lesson 3
 Introduction to Langsmith Studio and its functionality which offers a more visually rich experience with a lot of useful features discussed briefly. No ipynb file associated.
+
+## Lesson 4
+We initialize a conversation with some human and AI messages then pass that context to a model to solicit a response (context changes to explore structure).
+We then define a tool pass in a message that invokes said tools and then we use the messages as state in langgraph, defining reducers in the process **(see chain.ipynb for detailed discussions)**. Finally we invoke our graphs.
