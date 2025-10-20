@@ -34,3 +34,12 @@ We begin with a quick recap of what we did in module 1 and the beginning of the 
 2. The problem with both these methods are that they don't enforce types at runtime, which means that invalid values don't produce errors.
 3. So we use Pydantic, a powerful data validation library to address and solve this problem, and this time for invalid values we see an error.
 4. We then integrate this with our langgraph agent and verify that invalid values cause an error, I have added an additional cell in the ipynb file to demonstrate valid and invalid values.
+
+## Lesson 2
+We are introduced to the notion of *state reducers*
+1. We run a simple type dict with 1 node, and update the state by adding one, which is overwritten.
+2. We run into a problem when we have branching nodes— since there is ambiguity as to which state to update while the graph attempts simultaneous updates (which isn't possible) and therefore we get an error.
+3. With reducers, we specify how to perform updates, eliminating ambiguity. In our specific example, the overwriting is replaced by list concatenation and so the value at each node is just appended to a list and we don't have an error anymore.
+4. We then look at custom reducers for specific use cases, wherein we define a function and then use that function as our reducer to fix an error **(see state-reducers.ipynb)**
+5. We look at appending messages for context by using the add_messages reducer (using custom messages).
+6. We also discuss re-writing (custom re-writing for experimenting) and removal of messages.
