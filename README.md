@@ -26,3 +26,11 @@ We extend what we did in lesson 5 to a generic agent architecture by giving a To
 
 ## Lesson 7
 We again extend what we did in lesson 6 to introduce the concept of memory for our agent, which we demonstrate has no concept of memory on its own. We use persistence to address this problem, discussed in detail in agent-memory.ipynb. AGain nothing significant to tweak, can change the tools and context messages but nothing paradigm altering.
+
+# Module 2
+## Lesson 1
+We begin with a quick recap of what we did in module 1 and the beginning of the code **(see state-schema.ipynb)** with user defined states and nodes, and invoking them as before.  
+1. Then we discuss python data classes as an alternative way to type dict for establishing schema for our graph for versatility.
+2. The problem with both these methods are that they don't enforce types at runtime, which means that invalid values don't produce errors.
+3. So we use Pydantic, a powerful data validation library to address and solve this problem, and this time for invalid values we see an error.
+4. We then integrate this with our langgraph agent and verify that invalid values cause an error, I have added an additional cell in the ipynb file to demonstrate valid and invalid values.
