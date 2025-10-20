@@ -50,3 +50,10 @@ We open with reasons why we would need more control over schemas.
 1. Then we use Private States for passing on states inside the langgraph nodes and the Overall State which is visible to the user.
 2. We then define custom Input and Output states through user defined functions and then use it in our nodes. **(see multiple-schemas.ipynb)**
 3. We can use this to restrict what is shown in inputs and outputs is the schema as per use case.
+
+## Lesson 4
+We define message as state (custom messages), pass them onto an LLM model and then visualize using langgraph.
+1. We then move onto tackling long running conversations using reducers. So we define custom reducers to do so (for example, a reducer that deletes all but the last two messages in a conversation, this number could be changed as per need).
+2. We take a look at LangSmith platform to see the workings.
+3. We also use Trim Messages to limit token usage, and then open the LangSmith platform to see the runs.
+
