@@ -43,3 +43,10 @@ We are introduced to the notion of *state reducers*
 4. We then look at custom reducers for specific use cases, wherein we define a function and then use that function as our reducer to fix an error **(see state-reducers.ipynb)**
 5. We look at appending messages for context by using the add_messages reducer (using custom messages).
 6. We also discuss re-writing (custom re-writing for experimenting) and removal of messages.
+
+
+## Lesson 3
+We open with reasons why we would need more control over schemas.
+1. Then we use Private States for passing on states inside the langgraph nodes and the Overall State which is visible to the user.
+2. We then define custom Input and Output states through user defined functions and then use it in our nodes. **(see multiple-schemas.ipynb)**
+3. We can use this to restrict what is shown in inputs and outputs is the schema as per use case.
