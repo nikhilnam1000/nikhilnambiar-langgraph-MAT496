@@ -57,3 +57,11 @@ We define message as state (custom messages), pass them onto an LLM model and th
 2. We take a look at LangSmith platform to see the workings.
 3. We also use Trim Messages to limit token usage, and then open the LangSmith platform to see the runs.
 
+
+# Lesson 5
+We discuss adding summarization of the conversation as a feature for our agent.
+1. We define a node for the summarization, tweaking it according to conversation length.
+2. We then go on to compile our graph as per previous lessons.
+3. Then we go on about testing this, by creating a thread of conversations (with custom HumanMessages) and then extracting its summary successfully.
+4. We then have a quick look over at LangSmith to see the invokes.
+The summary is satisfactory even when talking about very niche topics.
