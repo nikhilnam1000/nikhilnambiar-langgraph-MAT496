@@ -55,13 +55,20 @@ We open with reasons why we would need more control over schemas.
 We define message as state (custom messages), pass them onto an LLM model and then visualize using langgraph.
 1. We then move onto tackling long running conversations using reducers. So we define custom reducers to do so (for example, a reducer that deletes all but the last two messages in a conversation, this number could be changed as per need).
 2. We take a look at LangSmith platform to see the workings.
-3. We also use Trim Messages to limit token usage, and then open the LangSmith platform to see the runs.
+3. We also use Trim Messages to limit token usage, and then open the LangSmith platform to see the runs. **(see chain.ipynb)**
 
 
-# Lesson 5
+## Lesson 5
 We discuss adding summarization of the conversation as a feature for our agent.
 1. We define a node for the summarization, tweaking it according to conversation length.
 2. We then go on to compile our graph as per previous lessons.
 3. Then we go on about testing this, by creating a thread of conversations (with custom HumanMessages) and then extracting its summary successfully.
 4. We then have a quick look over at LangSmith to see the invokes.
-The summary is satisfactory even when talking about very niche topics.
+The summary is satisfactory even when talking about very niche topics. **(see chatbot-summarization.ipynb)**
+
+## Lesson 6
+We discuss the transient nature of the memory of thr agent discussed in earlier lessons and build up the concept of external databases like sqlite for storing memory for a particular memory indefinitely.
+1. We make a sqlite database and re-compile our agent (with custom messages) with the new checkpointer. The advantage now is that the messages section is saved locally on the device so persistence is constant.
+2. To confirm this we interrupt and restart the kernel, re-run everything except the messages, and confirm that the state has persisted.
+3. Then we check out the system in LangChain (Studio).
+
