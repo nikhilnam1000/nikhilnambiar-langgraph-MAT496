@@ -87,3 +87,9 @@ We introduce human-in-the-loop with streaming.
 1. First we initialize our model and re-define some of the tools we've used in the past and then use a breakpoint to stop the graph at a certain point (we can interrupt before or after a certain step anywhere within the graph as an exercise).
 2. Then from that checkpoint we have the model re-execute and ask us whether to execute the tool or not. (Using None with our thread id) **(see breakpoints.ipynb)**
 
+## Lesson 3
+We introduce modifying the graph state with human-in-the-loop, on top of approval.
+1. Again we use the same tools by initializing them, and then using interrupt_before to introduce the breakpoint.
+2. We then modify the prompt by invoking the tool in a different way (multiplying two different numbers for example).
+3. Then again we use None to invoke it from our updated checkpoint and get the desired result (answer to the updated HumanMessage)
+
