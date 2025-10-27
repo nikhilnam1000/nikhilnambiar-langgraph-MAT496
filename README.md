@@ -93,3 +93,7 @@ We introduce modifying the graph state with human-in-the-loop, on top of approva
 2. We then modify the prompt by invoking the tool in a different way (multiplying two different numbers for example).
 3. Then again we use None to invoke it from our updated checkpoint and get the desired result (answer to the updated HumanMessage)
 
+
+## Lesson 4
+We discuss the notion of the graph interrupting itself dynamically, which could depend on something within a given node.
+We proceed to demonstrate by defining a node interrupt in our graph with 5 nodes, which could be placed in any other node and the condition could also be changed.
