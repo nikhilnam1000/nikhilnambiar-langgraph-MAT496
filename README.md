@@ -72,3 +72,13 @@ We discuss the transient nature of the memory of thr agent discussed in earlier 
 2. To confirm this we interrupt and restart the kernel, re-run everything except the messages, and confirm that the state has persisted.
 3. Then we check out the system in LangChain (Studio).
 
+# Module 3
+## Lesson 1
+We are introduced to the notion of streaming, and we initialize our chatbot and discuss different types of streaming.
+1. We then proceed to stream updates (minor human message tweaking) and then print the state update.
+2. Then we compare it to streaming values.
+3. Then we pass another custom thread and stream the tokens as they are generated (see streaming-interruption.ipynb)
+4. Then we see stream the content in those tokens (for some reason there is a not defined error for one of the functions that I am not able to fix).
+5. Then we see the workings in LangStudio which is now integrated with the browser so it's the same thing.
+
+
