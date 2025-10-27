@@ -92,8 +92,16 @@ We introduce modifying the graph state with human-in-the-loop, on top of approva
 1. Again we use the same tools by initializing them, and then using interrupt_before to introduce the breakpoint.
 2. We then modify the prompt by invoking the tool in a different way (multiplying two different numbers for example).
 3. Then again we use None to invoke it from our updated checkpoint and get the desired result (answer to the updated HumanMessage)
-
+**(see edit-state-human-feedback.ipynb)**
 
 ## Lesson 4
 We discuss the notion of the graph interrupting itself dynamically, which could depend on something within a given node.
-We proceed to demonstrate by defining a node interrupt in our graph with 5 nodes, which could be placed in any other node and the condition could also be changed.
+We proceed to demonstrate by defining a node interrupt in our graph with 5 nodes, which could be placed in any other node and the condition could also be changed. **(see dynamic-breakpoints.ipynb)**
+
+## Lesson 5
+We are introduced to the notion of debugging in langgraph with all its multifunctionalities.
+1. We initialize our simple agent and run it.
+2. We then look at the curret state of the graph using get_state.
+3. We also use get_state_history to get the history of all the states at each step that our agent took and we can also go back each step one by one to inspect the states.
+4. We introduce the concept of replaying, which enables us to re-run our agent from any of the prior steps by using to_replay and look at the state using to_replay.values. We can even see the next node call using to_replay.next as well as get the config, which tell us the checkpoint_id as well as the thread_id.
+5. We introduce the concept of forking which allows us to run from a breakpoint BUT with a different input with its appropriate commands **(see time-travel.ipynb)**
