@@ -77,8 +77,13 @@ We discuss the transient nature of the memory of thr agent discussed in earlier 
 We are introduced to the notion of streaming, and we initialize our chatbot and discuss different types of streaming.
 1. We then proceed to stream updates (minor human message tweaking) and then print the state update.
 2. Then we compare it to streaming values.
-3. Then we pass another custom thread and stream the tokens as they are generated (see streaming-interruption.ipynb)
+3. Then we pass another custom thread and stream the tokens as they are generated **(see streaming-interruption.ipynb)**
 4. Then we see stream the content in those tokens (for some reason there is a not defined error for one of the functions that I am not able to fix).
 5. Then we see the workings in LangStudio which is now integrated with the browser so it's the same thing.
 
+
+## Lesson 2
+We introduce human-in-the-loop with streaming.
+1. First we initialize our model and re-define some of the tools we've used in the past and then use a breakpoint to stop the graph at a certain point (we can interrupt before or after a certain step anywhere within the graph as an exercise).
+2. Then from that checkpoint we have the model re-execute and ask us whether to execute the tool or not. (Using None with our thread id) **(see breakpoints.ipynb)**
 
