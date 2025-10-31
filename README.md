@@ -124,4 +124,12 @@ We introduce the notion of map reduce, which has two phases:
 1. `Map`: Break a task into smaller sub-tasks, processing each sub-task in parallel.
 2. `Reduce`: Aggregate the results across all of the completed, parallelized sub-tasks.  
 
-Then we go on to use it in a dummy case of joke generation where nodes are created according to the topic given
+Then we go on to use it in a dummy case of joke generation where nodes are created according to the topic given **(see map-reduce.ipynb)**
+
+## Lesson 4
+We bring everything we learnt so far together to create a research agent.
+1. We generate 'analysts' AI personas (tweaked).
+2. Then we simulate an interview between the analysts and experts.
+3. We then bring in `TavilySearch` and `Wikipedia Search` into the picture for analyzing the conversation.
+4. Then with all the context in mind the answer is given by the 'expert'.
+5. Finally a report is generated and this entire process is compiled into a graph, where there is a large degree of freedom as to what course to take and what to do that can be tweaked with. **(see research-assistant.ipynb)**
