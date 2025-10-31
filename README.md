@@ -112,9 +112,16 @@ We begin by running a simple graph with 4 nodes. We then:
 1. Change the structure by running two nodes in parallel (where I have changed the structure to ensure the logic is clear), nodes 'c' and 'd'.
 2. We add a reducer to correct the error of only one value per step, running again to find no errors.
 3. Then we discuss a different graph flow and define a custom reducer that can alter the order in which the states are run (structures can be changed as per need).
-4. We then apply this to a more realistic scenario of prompting our model to use tavily search and wikipedia search, make a graph and invoke it.
+4. We then apply this to a more realistic scenario of prompting our model to use tavily search and wikipedia search, make a graph and invoke it. **(see parallelization)**
 
-# Lesson 2
+## Lesson 2
 We introduce the notion of sub graphs, which can be used to run different tasks parallely, and the architecture of bringing it all together with the parent graph with dummy functions.
 This makes our traces much easier to work with in terms of organization.
-Dummy logs can be tweaked with different prompts.
+Dummy logs can be tweaked with different prompts. **(see sub-graph.ipynb)**
+
+## Lesson 3
+We introduce the notion of map reduce, which has two phases:
+1. `Map`: Break a task into smaller sub-tasks, processing each sub-task in parallel.
+2. `Reduce`: Aggregate the results across all of the completed, parallelized sub-tasks.  
+
+Then we go on to use it in a dummy case of joke generation where nodes are created according to the topic given
