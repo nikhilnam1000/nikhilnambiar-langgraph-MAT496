@@ -112,4 +112,9 @@ We begin by running a simple graph with 4 nodes. We then:
 1. Change the structure by running two nodes in parallel (where I have changed the structure to ensure the logic is clear), nodes 'c' and 'd'.
 2. We add a reducer to correct the error of only one value per step, running again to find no errors.
 3. Then we discuss a different graph flow and define a custom reducer that can alter the order in which the states are run (structures can be changed as per need).
-4. We then apply this to a more realistic scenario of promtping our model to use tavily search and wikiedia search and make a graph and invoke it.
+4. We then apply this to a more realistic scenario of prompting our model to use tavily search and wikipedia search, make a graph and invoke it.
+
+# Lesson 2
+We introduce the notion of sub graphs, which can be used to run different tasks parallely, and the architecture of bringing it all together with the parent graph with dummy functions.
+This makes our traces much easier to work with in terms of organization.
+Dummy logs can be tweaked with different prompts.
